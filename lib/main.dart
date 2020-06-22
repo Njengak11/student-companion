@@ -25,15 +25,37 @@ class HomePage extends StatelessWidget {
          title: Text('Student Companion'),
          centerTitle: true,
       ),
-      body: ListView(
-        children:[
-          Image.asset('assets/daystar.jpeg',
-          fit:BoxFit.cover,
-          ),
-          
-        ]
-       ),
-    
+      body: Padding(
+        padding:const EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0) ,
+        child: Column( 
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Center( 
+              child:Image.asset(
+                'assets/daystar.jpeg'
+              )
+            ),
+            Text(
+              'Welcome Daystarian',
+              style: TextStyle( 
+                color:Colors.black,
+                letterSpacing:2.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox ( 
+              height: 10.0,
+            ),
+            Text( 
+              'Daystar would like to take this opportunity to welcometo the Daystar Family',
+              style:TextStyle(
+                fontSize: 28.0,
+                letterSpacing: 2.0,
+              )
+            )
+          ],
+        ),
+      ),
     //nav drawer
       drawer: Drawer(
         child: ListView( 

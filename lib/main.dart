@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp( 
       theme: ThemeData( 
         primaryColor: Colors.white,
+       
       ),
       home:HomePage(),
     );
@@ -23,6 +24,7 @@ class HomePage extends StatelessWidget {
 
   Widget build(BuildContext context) {
     return Scaffold(
+       backgroundColor: Colors.white,
       appBar: AppBar(
          title: Text('Student Companion'),
          centerTitle: true,
@@ -35,30 +37,39 @@ class HomePage extends StatelessWidget {
           children: <Widget>[
             Center( 
               child:Image.asset(
-                'assets/daystar.jpeg'
+                'assets/daystar logo.png'
               )
             ),
+            SizedBox(height:40.0),
             Text(
-              'Welcome Daystarian',
+              'Welcome Daystarian!',
               style: TextStyle( 
-                color:Colors.black,
+                color:Colors.lightBlue,
                 letterSpacing:2.0,
+                fontSize: 40.0,
                 fontWeight: FontWeight.bold,
               ),
+              textAlign: TextAlign.center,
             ),
             SizedBox ( 
-              height: 10.0,
+              height: 30.0,
             ),
             Text( 
-              'Daystar would like to take this opportunity to welcometo the Daystar Family',
+              'Daystar would like to take this opportunity to welcome into the Daystar Family',
               style:TextStyle(
                 fontSize: 28.0,
                 letterSpacing: 2.0,
+                color:Colors.lightBlue,
               )
             )
           ],
         ),
       ),
+
+
+
+
+
     //nav drawer
       drawer: Drawer(
         child: ListView( 

@@ -16,7 +16,7 @@ class Contacts extends StatelessWidget {
         elevation: 0.0,
       ),
       body:ListView(
-  padding: const EdgeInsets.all(8),
+  padding:const EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0) ,
   children: <Widget>[
       Center(
               child:CircleAvatar(
@@ -293,6 +293,7 @@ class Contacts extends StatelessWidget {
               fontSize:17.0,
               ),
             ),
+            SizedBox(height:50)
   ],
 )  
     );

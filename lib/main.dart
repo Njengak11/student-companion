@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:student_companion/contacts.dart';
 import 'package:student_companion/schedule.dart';
+import 'package:student_companion/website.dart';
 
 
 void main() => runApp(new MyApp());
@@ -24,6 +26,7 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
          title: Text('Student Companion'),
          centerTitle: true,
+         elevation: 0.0,
       ),
       body: Padding(
         padding:const EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0) ,
@@ -131,7 +134,18 @@ class HomePage extends StatelessWidget {
                 Navigator.of(context).pop();
                 Navigator.of(context).push(MaterialPageRoute(
                   builder: (BuildContext context)=>
-                  Schedule("Contacts")));
+                  Contacts("Contacts")));
+              },
+             ),
+             ListTile( 
+              title: Text(" Website"),
+              trailing: Icon(Icons.language,
+              color: Colors.blue[900]),
+              onTap: (){
+                Navigator.of(context).pop();
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (BuildContext context)=>
+                  Website(" Website")));
               },
              ),
              Divider(),

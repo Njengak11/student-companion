@@ -13,38 +13,38 @@ class Contacts extends StatelessWidget {
           'Contacts'
         ),
         centerTitle: true,
+        elevation: 0.0,
       ),
-      body: Padding(
-        padding: EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0.0),
-        child: Column( 
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children:<Widget> [
-            Center(
+      body:ListView(
+  padding: const EdgeInsets.all(8),
+  children: <Widget>[
+      Center(
               child:CircleAvatar(
                 backgroundImage: AssetImage('assets/phone.png'),
                 radius: 45.0,
               )
             ),
-            Divider( 
-              height:90.0,
-              color:Colors.grey[800],
-            ),
-            //contacts
-            Text(
+
+            SizedBox(height:40.0),
+
+              Text(
              ' NAIROBI CAMPUS',
+             textAlign: TextAlign.center,
              style:TextStyle( 
                letterSpacing:2.0,
                fontSize:30.0,
-               fontWeight:FontWeight.bold
+               fontWeight:FontWeight.bold,
+               color: Colors.lightBlue
              )
             ),
-            SizedBox(height:30.0),
+     SizedBox(height:30.0),
             Text( 
               'Address',
               style: TextStyle( 
                 letterSpacing:2.0,
-              fontSize:25.0,
-              fontWeight:FontWeight.bold
+              fontSize:23.0,
+              fontWeight:FontWeight.bold,
+              color: Colors.lightBlue
               ),
             ),
             SizedBox(height:10.0),
@@ -52,8 +52,7 @@ class Contacts extends StatelessWidget {
               'P.O Box 44400-00100 Nairob,Kenya',
               style: TextStyle( 
                 letterSpacing:2.0,
-              fontSize:25.0,
-              fontWeight:FontWeight.bold
+              fontSize:17.0,
               ),
             ),
             SizedBox(height:10.0),
@@ -61,8 +60,9 @@ class Contacts extends StatelessWidget {
               'Phone',
               style: TextStyle( 
                 letterSpacing:2.0,
-              fontSize:25.0,
-              fontWeight:FontWeight.bold
+              fontSize:23.0,
+              fontWeight:FontWeight.bold,
+              color: Colors.lightBlue
               ),
             ),
             SizedBox(height:10.0),
@@ -70,8 +70,7 @@ class Contacts extends StatelessWidget {
               '0709 927 000 | 0724256408 |',
               style: TextStyle( 
                 letterSpacing:2.0,
-              fontSize:25.0,
-              fontWeight:FontWeight.bold
+              fontSize:17.0,
               ),
             ),
             SizedBox(height:10.0),
@@ -79,17 +78,17 @@ class Contacts extends StatelessWidget {
               'PR line',
               style: TextStyle( 
                 letterSpacing:2.0,
-              fontSize:25.0,
-              fontWeight:FontWeight.bold
+              fontSize:23.0,
+              fontWeight:FontWeight.bold,
+              color: Colors.lightBlue
               ),
             ),
-            SizedBox(height:10.0),
+            SizedBox(height:19.0),
             Text( 
               '0748100759',
               style: TextStyle( 
                 letterSpacing:2.0,
-              fontSize:25.0,
-              fontWeight:FontWeight.bold
+              fontSize:17.0
               ),
             ),
             SizedBox(height:10.0),
@@ -97,8 +96,9 @@ class Contacts extends StatelessWidget {
               'Marketing line',
               style: TextStyle( 
                 letterSpacing:2.0,
-              fontSize:25.0,
-              fontWeight:FontWeight.bold
+              fontSize:23.0,
+              fontWeight:FontWeight.bold,
+              color: Colors.lightBlue
               ),
             ),
             SizedBox(height:10.0),
@@ -106,11 +106,10 @@ class Contacts extends StatelessWidget {
               '0716170313',
               style: TextStyle( 
                 letterSpacing:2.0,
-              fontSize:25.0,
-              fontWeight:FontWeight.bold
+              fontSize:17.0,
               ),
             ),
-            SizedBox(height:10.0),
+            SizedBox(height:20.0),
 
             //email
             Row(
@@ -121,21 +120,40 @@ class Contacts extends StatelessWidget {
                 ),
                 SizedBox(width: 10.0),
                 Text( 
-                  'admissiions@daystar.ac.ke | careersmade@daystar.ac.ke',
+                  'admissions@daystar.ac.ke',
                   style: TextStyle( 
-                    fontSize:18.0,
+                    fontSize:17.0,
                     letterSpacing:1.0,
                   ),
                 ),
-                SizedBox(height:30.0),
               ]
             ),
+             SizedBox(height:10.0),
+               Row(
+              children:<Widget>[
+                Icon(
+                  Icons.email,
+                  color:Colors.lightBlue,
+                ),
+                SizedBox(width: 10.0),
+                Text( 
+                  'careersmade@daystar.ac.ke',
+                  style: TextStyle( 
+                    fontSize:17.0,
+                    letterSpacing:1.0,
+                  ),
+                ),
+              ]
+            ),
+             SizedBox(height:30.0),
              Text( 
                   'OR',
+                  textAlign: TextAlign.center,
                   style: TextStyle( 
                     letterSpacing:2.0,
                     fontSize:30.0,
                     fontWeight:FontWeight.bold,
+                    color: Colors.lightBlue,
                   ),
                 ),
                 SizedBox(height:30.0),
@@ -143,8 +161,9 @@ class Contacts extends StatelessWidget {
               'Phone',
               style: TextStyle( 
                 letterSpacing:2.0,
-              fontSize:25.0,
-              fontWeight:FontWeight.bold
+              fontSize:23.0,
+              fontWeight:FontWeight.bold,
+              color: Colors.lightBlue
               ),
             ),
             SizedBox(height:10.0),
@@ -152,8 +171,7 @@ class Contacts extends StatelessWidget {
               '0709 972 000 Ext 356 / 200',
               style: TextStyle( 
                 letterSpacing:2.0,
-              fontSize:25.0,
-              fontWeight:FontWeight.bold
+              fontSize:17.0,
               ),
             ),
             SizedBox(height:10.0),
@@ -161,8 +179,9 @@ class Contacts extends StatelessWidget {
               'PR line',
               style: TextStyle( 
                 letterSpacing:2.0,
-              fontSize:25.0,
-              fontWeight:FontWeight.bold
+              fontSize:23.0,
+              fontWeight:FontWeight.bold,
+              color: Colors.lightBlue
               ),
             ),
              SizedBox(height:10.0),
@@ -170,11 +189,10 @@ class Contacts extends StatelessWidget {
               '0748100759 (Call or Text)',
               style: TextStyle( 
                 letterSpacing:2.0,
-              fontSize:25.0,
-              fontWeight:FontWeight.bold
+              fontSize:17.0,
               ),
             ),
-             SizedBox(height:10.0),
+             SizedBox(height:19.0),
             //email
             Row(
               children:<Widget>[
@@ -186,28 +204,31 @@ class Contacts extends StatelessWidget {
                 Text( 
                   'feedback@daystar.ac.ke',
                   style: TextStyle( 
-                    fontSize:18.0,
+                    fontSize:17.0,
                     letterSpacing:1.0,
                   ),
                 ),
-                SizedBox(height:30.0),
               ]
             ),
+             SizedBox(height:30.0),
               Text(
              ' MAIN CAMPUS ATHI RIVER',
+             textAlign: TextAlign.center,
              style:TextStyle( 
                letterSpacing:2.0,
                fontSize:30.0,
-               fontWeight:FontWeight.bold
-             )
+               fontWeight:FontWeight.bold,
+               color: Colors.lightBlue
+             ),
             ),
             SizedBox(height:30.0),
             Text( 
               'Address',
               style: TextStyle( 
                 letterSpacing:2.0,
-              fontSize:25.0,
-              fontWeight:FontWeight.bold
+              fontSize:23.0,
+              fontWeight:FontWeight.bold,
+              color: Colors.lightBlue
               ),
             ),
             SizedBox(height:10.0),
@@ -215,8 +236,7 @@ class Contacts extends StatelessWidget {
               'P. O. Box 17, Daystar University 90145',
               style: TextStyle( 
                 letterSpacing:2.0,
-              fontSize:25.0,
-              fontWeight:FontWeight.bold
+              fontSize:17.0,
               ),
             ),
             SizedBox(height:10.0),
@@ -224,8 +244,9 @@ class Contacts extends StatelessWidget {
               'Phone',
               style: TextStyle( 
                 letterSpacing:2.0,
-              fontSize:25.0,
-              fontWeight:FontWeight.bold
+              fontSize:23.0,
+              fontWeight:FontWeight.bold,
+              color: Colors.lightBlue,
               ),
             ),
             SizedBox(height:10.0),
@@ -233,8 +254,7 @@ class Contacts extends StatelessWidget {
               '0709 972 000 | 0724 256 408 | 0724 256 409',
               style: TextStyle( 
                 letterSpacing:2.0,
-              fontSize:25.0,
-              fontWeight:FontWeight.bold
+              fontSize:17.0,
               ),
             ),
             SizedBox(height:10.0),
@@ -242,8 +262,9 @@ class Contacts extends StatelessWidget {
               'PR line',
               style: TextStyle( 
                 letterSpacing:2.0,
-              fontSize:25.0,
-              fontWeight:FontWeight.bold
+              fontSize:23.0,
+              fontWeight:FontWeight.bold,
+              color: Colors.lightBlue
               ),
             ),
             SizedBox(height:10.0),
@@ -251,8 +272,7 @@ class Contacts extends StatelessWidget {
               '0748100759',
               style: TextStyle( 
                 letterSpacing:2.0,
-              fontSize:25.0,
-              fontWeight:FontWeight.bold
+              fontSize:17.0,
               ),
             ),
             SizedBox(height:10.0),
@@ -260,8 +280,9 @@ class Contacts extends StatelessWidget {
               'Marketing line',
               style: TextStyle( 
                 letterSpacing:2.0,
-              fontSize:25.0,
-              fontWeight:FontWeight.bold
+              fontSize:23.0,
+              fontWeight:FontWeight.bold,
+              color: Colors.lightBlue
               ),
             ),
             SizedBox(height:10.0),
@@ -269,13 +290,11 @@ class Contacts extends StatelessWidget {
               '0716170313',
               style: TextStyle( 
                 letterSpacing:2.0,
-              fontSize:25.0,
-              fontWeight:FontWeight.bold
+              fontSize:17.0,
               ),
             ),
-          ]
-        ),
-      )
+  ],
+)  
     );
   }
 }

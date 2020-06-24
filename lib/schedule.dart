@@ -14,7 +14,7 @@ class Schedule extends StatelessWidget {
         title: Text(
           title
         ),
-      ),
+      ), 
       body: Center(
         child: Text(title),
       ),

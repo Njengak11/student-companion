@@ -25,6 +25,8 @@ dependencies:
   
   flutter:
     sdk: flutter
+
+  carousel_slider: ^2.2.1  
   
   google_fonts: ^0.2.0  
 

@@ -26,46 +26,53 @@ class HomePage extends StatelessWidget {
     return Scaffold(
        backgroundColor: Colors.white,
       appBar: AppBar(
-         title: Text('Student Companion'),
+         title: Text('Daystar University' ,
+         style:TextStyle(
+           color: Colors.lightBlue,
+         ) 
+         ,),
          centerTitle: true,
          elevation: 0.0,
       ),
-      body: Padding(
-        padding:const EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0) ,
-        child: Column( 
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            Center( 
-              child:Image.asset(
-                'assets/daystar logo.png'
-              )
-            ),
-            SizedBox(height:40.0),
-            Text(
-              'Welcome Daystarian!',
-              style: TextStyle( 
-                color:Colors.lightBlue,
-                letterSpacing:2.0,
-                fontSize: 40.0,
-                fontWeight: FontWeight.bold,
-              ),
-              textAlign: TextAlign.center,
-            ),
-            SizedBox ( 
-              height: 30.0,
-            ),
-            Text( 
-              'Daystar would like to take this opportunity to welcome into the Daystar Family',
-              style:TextStyle(
-                fontSize: 28.0,
-                letterSpacing: 2.0,
-                color:Colors.lightBlue,
+      body: Center(
+        child:Column(
+          crossAxisAlignment:CrossAxisAlignment.start,
+          children:<Widget>[
+            Row(),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 64.0, vertical: 32.0),
+              child:Container(
+                child:Column( 
+                  crossAxisAlignment:CrossAxisAlignment.start,
+                  children:<Widget>[
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 16.0),
+                     child:CircleAvatar(
+                          backgroundImage: AssetImage('assets/star.png'),
+                             radius: 45.0,
+                             )
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(0.0,16.0,0.0,12.0),
+                      child: Text("Welcome Daystarian.", 
+                      style: TextStyle(
+                        fontSize: 40.0,
+                       color: Colors.lightBlue,
+                        fontWeight: FontWeight.w500
+                        ),
+                      ),
+                    ),
+                    Text("Looks like feel good.",
+                     style: TextStyle(color: Colors.lightBlue
+                     ),
+                     ),
+                  ]
+                )
               )
             )
-          ],
-        ),
+          ]
+        )
       ),
-
 
 
 
@@ -171,3 +178,4 @@ class HomePage extends StatelessWidget {
     );
   }
 } 
+  

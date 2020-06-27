@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:nice_button/nice_button.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:student_companion/checklist.dart';
 import 'package:student_companion/contacts.dart';
+import 'package:student_companion/dining.dart';
+import 'package:student_companion/location.dart';
 import 'package:student_companion/schedule.dart';
+import 'package:student_companion/transport.dart';
 import 'package:student_companion/website.dart';
+
 
 
 void main() => runApp(new MyApp());
@@ -27,10 +34,8 @@ class HomePage extends StatelessWidget {
        backgroundColor: Colors.white,
       appBar: AppBar(
          title: Text('Daystar University' ,
-         style:TextStyle(
-           color: Colors.lightBlue,
-         ) 
-         ,),
+         style:GoogleFonts.pacifico(color: Colors.lightBlue),
+         ),
          centerTitle: true,
          elevation: 0.0,
       ),
@@ -40,36 +45,50 @@ class HomePage extends StatelessWidget {
           children:<Widget>[
             Row(),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 64.0, vertical: 32.0),
+              padding: EdgeInsets.symmetric(horizontal: 60.0, vertical: 40.0),
               child:Container(
                 child:Column( 
                   crossAxisAlignment:CrossAxisAlignment.start,
                   children:<Widget>[
-                    Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 16.0),
-                     child:CircleAvatar(
-                          backgroundImage: AssetImage('assets/star.png'),
-                             radius: 45.0,
-                             )
+                  Center(
+                    child:Image(
+                      image: AssetImage('assets/welcome.jpg'),
+                      height: 300.0,
+                      width: 300.0,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.fromLTRB(0.0,16.0,0.0,12.0),
-                      child: Text("Welcome Daystarian.", 
-                      style: TextStyle(
-                        fontSize: 40.0,
-                       color: Colors.lightBlue,
-                        fontWeight: FontWeight.w500
-                        ),
-                      ),
-                    ),
-                    Text("Looks like feel good.",
-                     style: TextStyle(color: Colors.lightBlue
-                     ),
-                     ),
+                  ),
+
+                  SizedBox(height:20),
+                   Text('To your Student Companion App',
+                   textAlign: TextAlign.center,
+                  style:GoogleFonts.pacifico(
+                    fontSize: 30.0,
+                    color: Colors.lightBlue,
+                    fontWeight: FontWeight.w300
+                  ),
+                   ),
                   ]
                 )
-              )
-            )
+              ),
+            ),
+            SizedBox(height:35.0),
+              Align(
+                alignment:Alignment.center,
+                child:NiceButton(
+                  width: 225,
+                  elevation: 8.0,
+                  radius: 52.0,
+                  background:Colors.lightBlue,
+                  onPressed: (){
+                    Navigator.push( context,
+                    MaterialPageRoute(builder: (context)
+                    => Schedule('Your Schedule'))
+                      );
+                  }, text: 'Schedule',  
+                  
+                  icon: Icons.arrow_forward
+                ),
+                ),
           ]
         )
       ),
@@ -82,70 +101,67 @@ class HomePage extends StatelessWidget {
         child: ListView( 
           children: <Widget>[
             new UserAccountsDrawerHeader(
-              accountName: Text('Njenga'), 
-              accountEmail: Text('Karori'),
+              accountName: Text('Daystar',
+              style:GoogleFonts.pacifico(color: Colors.lightBlue)
+              ), 
+              accountEmail: Text('University',
+              style: GoogleFonts.pacifico(color: Colors.lightBlue)
+              ),
               currentAccountPicture: CircleAvatar( 
-                backgroundColor: Colors.blue,
-                child: Text('N'),
+                backgroundImage: AssetImage('assets/star.png'),
+                             radius: 45.0,
               ),
             ),
             ListTile( 
-              title: Text("Your Schedule"),
-              trailing: Icon(Icons.calendar_today,
-              color: Colors.orange),
-              onTap: (){  
-                Navigator.of(context).pop();
-                Navigator.of(context).push(MaterialPageRoute(
-                  builder: (BuildContext context)=> 
-                  Schedule("Your Schedule")));
-              }
-            ),
-            ListTile( 
-              title: Text("Checklist"),
+              title: Text("Checklist",
+              style:GoogleFonts.pacifico(color: Colors.lightBlue),
+              ),
               trailing: Icon(Icons.list,
               color: Colors.red),
               onTap: (){
                 Navigator.of(context).pop();
                 Navigator.of(context).push(MaterialPageRoute(
                   builder: (BuildContext context)=>
-                  Schedule("Checklist")));
+                  Checklist("Checklist")
+                  )
+                  );
               },
              ),
              ListTile( 
-              title: Text("Location"),
+              title: Text("Location",style:GoogleFonts.pacifico(color: Colors.lightBlue),),
               trailing: Icon(Icons.map,
               color: Colors.green),
               onTap: (){
                 Navigator.of(context).pop();
                 Navigator.of(context).push(MaterialPageRoute(
                   builder: (BuildContext context)=>
-                  Schedule("Location")));
+                  Location("Location")));
               },
              ),
              ListTile( 
-              title: Text("Dining"),
+              title: Text("Dining",style:GoogleFonts.pacifico(color: Colors.lightBlue),),
               trailing: Icon(Icons.fastfood,
               color: Colors.yellow),
               onTap: (){
                 Navigator.of(context).pop();
                 Navigator.of(context).push(MaterialPageRoute(
                   builder: (BuildContext context)=>
-                  Schedule("Dining")));
+                  Dining("Dining")));
               },
              ),
              ListTile( 
-              title: Text("Transport"),
+              title: Text("Transport",style:GoogleFonts.pacifico(color: Colors.lightBlue),),
               trailing: Icon(Icons.directions_bus,
               color: Colors.lightBlue),
               onTap: (){
                 Navigator.of(context).pop();
                 Navigator.of(context).push(MaterialPageRoute(
                   builder: (BuildContext context)=>
-                  Schedule("Transport")));
+                  Transport("Transport")));
               },
              ),
              ListTile( 
-              title: Text("Contacts"),
+              title: Text("Contacts",style:GoogleFonts.pacifico(color: Colors.lightBlue),),
               trailing: Icon(Icons.call,
               color: Colors.purple),
               onTap: (){
@@ -156,7 +172,7 @@ class HomePage extends StatelessWidget {
               },
              ),
              ListTile( 
-              title: Text(" Website"),
+              title: Text(" Website",style:GoogleFonts.pacifico(color: Colors.lightBlue),),
               trailing: Icon(Icons.language,
               color: Colors.blue[900]),
               onTap: (){
@@ -168,7 +184,7 @@ class HomePage extends StatelessWidget {
              ),
              Divider(),
               ListTile( 
-              title: Text("Close"),
+              title: Text("Close",style:GoogleFonts.pacifico(color: Colors.lightBlue),),
               trailing: Icon(Icons.close),
               onTap: () => Navigator.of(context).pop(),
               ),
@@ -178,4 +194,5 @@ class HomePage extends StatelessWidget {
     );
   }
 } 
-  
+
+

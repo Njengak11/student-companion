@@ -26,9 +26,12 @@ dependencies:
   flutter:
     sdk: flutter
 
-  carousel_slider: ^2.2.1  
+
+
+
+  nice_button: ^0.1.7
   
-  google_fonts: ^0.2.0  
+  google_fonts: ^1.1.0
 
 
 

@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:student_companion/friday.dart';
+import 'package:student_companion/monday.dart';
+import 'package:student_companion/thursday.dart';
+import 'package:student_companion/tuesday.dart';
+import 'package:student_companion/wednesday.dart';
 class Schedule extends StatelessWidget {
   final String title;
 
  Schedule(this.title);
- 
  
   @override 
   Widget build(BuildContext context) {
@@ -33,7 +37,8 @@ class Schedule extends StatelessWidget {
               ),
             ),
             ),
-            Card(
+            GestureDetector(
+             child:Card(
               color: Colors.blueAccent,
               elevation: 10,
               child:Center(
@@ -42,11 +47,18 @@ class Schedule extends StatelessWidget {
                 fontSize: 20,
                 fontWeight:FontWeight.bold,
                 color: Colors.white),
-              )
+              ),
                 ),
             ),
+            onTap: () => Navigator.push(context, 
+            MaterialPageRoute(
+              builder: (context) => Monday('Monday')
+            )),
+            ),
+            
             SizedBox(height:50),
-            Card(
+             GestureDetector(
+             child:Card(
               color: Colors.deepOrange,
               elevation: 10,
               child:Center(
@@ -55,11 +67,17 @@ class Schedule extends StatelessWidget {
                 fontSize: 20,
                 fontWeight:FontWeight.bold,
                 color: Colors.white),
-              )
+              ),
                 ),
             ),
+            onTap: () => Navigator.push(context, 
+            MaterialPageRoute(
+              builder: (context) => Tuesday('Tuesday')
+            )),
+            ),
             SizedBox(height:50),
-            Card(
+            GestureDetector(
+             child:Card(
               color: Colors.purple,
               elevation: 10,
               child:Center(
@@ -68,11 +86,17 @@ class Schedule extends StatelessWidget {
                 fontSize: 20,
                 fontWeight:FontWeight.bold,
                 color: Colors.white),
-              )
+              ),
                 ),
             ),
+            onTap: () => Navigator.push(context, 
+            MaterialPageRoute(
+              builder: (context) => Wednesday('Wednesday')
+            )),
+            ),
             SizedBox(height:50),
-            Card(
+           GestureDetector(
+             child:Card(
               color: Colors.greenAccent,
               elevation: 10,
               child:Center(
@@ -81,12 +105,18 @@ class Schedule extends StatelessWidget {
                 fontSize: 20,
                 fontWeight:FontWeight.bold,
                 color: Colors.white),
-              )
+              ),
                 ),
             ),
+            onTap: () => Navigator.push(context, 
+            MaterialPageRoute(
+              builder: (context) => Thursday('Thursday')
+            )),
+            ),
             SizedBox(width:50),
-            Card(
-              color: Colors.redAccent, 
+            GestureDetector(
+             child:Card(
+              color: Colors.redAccent,
               elevation: 10,
               child:Center(
               child: Text('Friday',
@@ -94,8 +124,13 @@ class Schedule extends StatelessWidget {
                 fontSize: 20,
                 fontWeight:FontWeight.bold,
                 color: Colors.white),
-              )
+              ),
                 ),
+            ),
+            onTap: () => Navigator.push(context, 
+            MaterialPageRoute(
+              builder: (context) => Friday('Friday')
+            )),
             ),
 
           ]

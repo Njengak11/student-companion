@@ -33,6 +33,9 @@ dependencies:
   
   google_fonts: ^1.1.0
 
+  flip_card: ^0.4.4
+
+
 
 
 

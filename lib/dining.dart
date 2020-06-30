@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Dining extends StatelessWidget {
   final String title;
@@ -9,8 +10,10 @@ class Dining extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold( 
       appBar: AppBar( 
+        backgroundColor: Colors.blueAccent,
         title: Text(
-          title
+          'Dining',
+           style: GoogleFonts.pacifico(color: Colors.white),
         ),
       ),
       body: Center(

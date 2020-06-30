@@ -59,7 +59,7 @@ class Schedule extends StatelessWidget {
             SizedBox(height:50),
              GestureDetector(
              child:Card(
-              color: Colors.deepOrange,
+              color: Colors.orange,
               elevation: 10,
               child:Center(
               child: Text('Tuesday',
@@ -116,7 +116,7 @@ class Schedule extends StatelessWidget {
             SizedBox(width:50),
             GestureDetector(
              child:Card(
-              color: Colors.redAccent,
+              color: Colors.red,
               elevation: 10,
               child:Center(
               child: Text('Friday',

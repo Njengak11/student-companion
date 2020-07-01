@@ -10,7 +10,7 @@ class Dining extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold( 
       appBar: AppBar( 
-        backgroundColor: Colors.blueAccent,
+        backgroundColor: Colors.lightBlue,
         title: Text(
           'Dining',
            style: GoogleFonts.pacifico(color: Colors.white),

@@ -59,7 +59,7 @@ class HomePage extends StatelessWidget {
                   ),
 
                   SizedBox(height:20),
-                   Text('To your Student Companion App',
+                   Text('To Your Student Companion App',
                    textAlign: TextAlign.center,
                   style:GoogleFonts.pacifico(
                     fontSize: 30.0,
@@ -94,18 +94,20 @@ class HomePage extends StatelessWidget {
       ),
 
 
-
-
     //nav drawer
       drawer: Drawer(
         child: ListView( 
           children: <Widget>[
             new UserAccountsDrawerHeader(
               accountName: Text('Daystar',
-              style:GoogleFonts.pacifico(color: Colors.lightBlue)
+              style:GoogleFonts.pacifico(
+                color: Colors.lightBlue,
+                fontSize: 15.0)
               ), 
               accountEmail: Text('University',
-              style: GoogleFonts.pacifico(color: Colors.lightBlue)
+              style: GoogleFonts.pacifico(
+                color: Colors.lightBlue,
+                fontSize: 15.0)
               ),
               currentAccountPicture: CircleAvatar( 
                 backgroundImage: AssetImage('assets/star.png'),
@@ -114,10 +116,11 @@ class HomePage extends StatelessWidget {
             ),
             ListTile( 
               title: Text("Checklist",
-              style:GoogleFonts.pacifico(color: Colors.lightBlue),
+              style:GoogleFonts.pacifico(color: Colors.lightBlue,
+              fontSize: 15.0),
               ),
               trailing: Icon(Icons.list,
-              color: Colors.red),
+              color: Colors.lightBlue),
               onTap: (){
                 Navigator.of(context).pop();
                 Navigator.of(context).push(MaterialPageRoute(
@@ -128,9 +131,10 @@ class HomePage extends StatelessWidget {
               },
              ),
              ListTile( 
-              title: Text("Location",style:GoogleFonts.pacifico(color: Colors.lightBlue),),
+              title: Text("Location",style:GoogleFonts.pacifico(color: Colors.lightBlue,
+              fontSize: 15.0),),
               trailing: Icon(Icons.map,
-              color: Colors.green),
+              color: Colors.lightBlue),
               onTap: (){
                 Navigator.of(context).pop();
                 Navigator.of(context).push(MaterialPageRoute(
@@ -139,9 +143,10 @@ class HomePage extends StatelessWidget {
               },
              ),
              ListTile( 
-              title: Text("Dining",style:GoogleFonts.pacifico(color: Colors.lightBlue),),
+              title: Text("Dining",style:GoogleFonts.pacifico(color: Colors.lightBlue,
+              fontSize: 15.0),),
               trailing: Icon(Icons.fastfood,
-              color: Colors.yellow),
+              color: Colors.lightBlue),
               onTap: (){
                 Navigator.of(context).pop();
                 Navigator.of(context).push(MaterialPageRoute(
@@ -150,7 +155,8 @@ class HomePage extends StatelessWidget {
               },
              ),
              ListTile( 
-              title: Text("Transport",style:GoogleFonts.pacifico(color: Colors.lightBlue),),
+              title: Text("Transport",style:GoogleFonts.pacifico(color: Colors.lightBlue,
+              fontSize: 15.0),),
               trailing: Icon(Icons.directions_bus,
               color: Colors.lightBlue),
               onTap: (){
@@ -161,9 +167,10 @@ class HomePage extends StatelessWidget {
               },
              ),
              ListTile( 
-              title: Text("Contacts",style:GoogleFonts.pacifico(color: Colors.lightBlue),),
+              title: Text("Contacts",style:GoogleFonts.pacifico(color: Colors.lightBlue,
+              fontSize: 15.0),),
               trailing: Icon(Icons.call,
-              color: Colors.purple),
+              color: Colors.lightBlue),
               onTap: (){
                 Navigator.of(context).pop();
                 Navigator.of(context).push(MaterialPageRoute(
@@ -172,9 +179,10 @@ class HomePage extends StatelessWidget {
               },
              ),
              ListTile( 
-              title: Text(" Website",style:GoogleFonts.pacifico(color: Colors.lightBlue),),
+              title: Text(" Website",style:GoogleFonts.pacifico(color: Colors.lightBlue,
+              fontSize: 15.0),),
               trailing: Icon(Icons.language,
-              color: Colors.blue[900]),
+              color: Colors.lightBlue),
               onTap: (){
                 Navigator.of(context).pop();
                 Navigator.of(context).push(MaterialPageRoute(

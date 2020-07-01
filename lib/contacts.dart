@@ -9,9 +9,11 @@ class Contacts extends StatelessWidget {
   @override 
   Widget build(BuildContext context) {
     return Scaffold( 
+      backgroundColor: Colors.white,
       appBar: AppBar( 
         title: Text(
-          'Contacts'
+          'Contacts',
+           style: GoogleFonts.pacifico(color: Colors.lightBlue),
         ),
         centerTitle: true,
         elevation: 0.0,
@@ -20,10 +22,10 @@ class Contacts extends StatelessWidget {
   padding:const EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0) ,
   children: <Widget>[
       Center(
-              child:CircleAvatar(
-                backgroundImage: AssetImage('assets/phone.png'),
-                radius: 45.0,
-              )
+             child: Image.asset(
+            'assets/contact.jpg',
+            fit: BoxFit.fill,
+          ),
             ),
 
             SizedBox(height:40.0),
@@ -65,7 +67,7 @@ class Contacts extends StatelessWidget {
             ),
             SizedBox(height:10.0),
             Text( 
-              '0709 927 000 | 0724256408 |',
+              '0709 927 000 | 0724 256 408 |',
               style: GoogleFonts.pacifico( 
                 letterSpacing:2.0,
               fontSize:17.0,
@@ -82,7 +84,7 @@ class Contacts extends StatelessWidget {
             ),
             SizedBox(height:19.0),
             Text( 
-              '0748100759',
+              '0748 100 759',
               style: GoogleFonts.pacifico( 
                 letterSpacing:2.0,
               fontSize:17.0
@@ -99,7 +101,7 @@ class Contacts extends StatelessWidget {
             ),
             SizedBox(height:10.0),
             Text( 
-              '0716170313',
+              '0716 170 313',
               style: GoogleFonts.pacifico( 
                 letterSpacing:2.0,
               fontSize:17.0,
@@ -179,7 +181,7 @@ class Contacts extends StatelessWidget {
             ),
              SizedBox(height:10.0),
             Text( 
-              '0748100759 (Call or Text)',
+              '0748 100 759 (Call or Text)',
               style: GoogleFonts.pacifico( 
                 letterSpacing:2.0,
               fontSize:17.0,
@@ -258,7 +260,7 @@ class Contacts extends StatelessWidget {
             ),
             SizedBox(height:10.0),
             Text( 
-              '0748100759',
+              '0748 100 759',
               style: GoogleFonts.pacifico( 
                 letterSpacing:2.0,
               fontSize:17.0,
@@ -275,7 +277,7 @@ class Contacts extends StatelessWidget {
             ),
             SizedBox(height:10.0),
             Text( 
-              '0716170313',
+              '0716 170 313',
               style: GoogleFonts.pacifico( 
                 letterSpacing:2.0,
               fontSize:17.0,

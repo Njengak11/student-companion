@@ -32,12 +32,12 @@ class Transport extends StatelessWidget {
                 style: GoogleFonts.pacifico(
                   color: Colors.lightBlue,
                   fontSize: 30.0,
-                  fontWeight: FontWeight.w500)
+                  fontWeight: FontWeight.bold)
             ),
             ),
              SizedBox(height:20.0),
             Text(
-              'Daystar University offer transport for students to and from the Nairobi Campus to the Main Campus in Athi River',
+              'Daystar University offer transport for students to and from the Nairobi Campus to the Main Campus in Athi River .',
               style:GoogleFonts.pacifico(color: Colors.lightBlue,
               fontSize: 20.0,
               ) ,

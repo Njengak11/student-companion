@@ -92,6 +92,9 @@ class HomePage extends StatelessWidget {
           ]
         )
       ),
+      //bottom Nav
+      
+
 
 
     //nav drawer

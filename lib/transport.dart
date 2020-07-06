@@ -21,7 +21,7 @@ class Transport extends StatelessWidget {
         padding:const EdgeInsets.fromLTRB(30.0, 10.0, 30.0, 0),
         children:<Widget>[
           Image.asset(
-            'assets/transport.png',
+            'assets/bus2.jpg',
             fit: BoxFit.fill,
           ),
           

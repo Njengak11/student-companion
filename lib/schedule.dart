@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:student_companion/friday.dart';
 import 'package:student_companion/monday.dart';
+import 'package:student_companion/saturday.dart';
 import 'package:student_companion/thursday.dart';
 import 'package:student_companion/tuesday.dart';
 import 'package:student_companion/wednesday.dart';
@@ -16,12 +17,13 @@ class Schedule extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: AppBar( 
         title: Text(
-          'Your Schedule',
+          'Pick a day',
            style:GoogleFonts.pacifico(color: Colors.lightBlue),
       ),
        centerTitle: true,
          elevation: 0.0,
       ),
+      
       body: Container(
         padding: EdgeInsets.all(10),
         child:GridView(
@@ -29,14 +31,9 @@ class Schedule extends StatelessWidget {
             crossAxisCount:2 
           ),
           children:<Widget>[
-            Center(
-              child:Text('Pick a day',
-              style:GoogleFonts.pacifico(
-              color: Colors.lightBlue,
-              fontSize: 20,
-              ),
-            ),
-            ),
+          
+            
+           
             GestureDetector(
              child:Card(
               color: Colors.blueAccent,
@@ -55,8 +52,8 @@ class Schedule extends StatelessWidget {
               builder: (context) => Monday('Monday')
             )),
             ),
-            
-            SizedBox(height:50),
+           
+           
              GestureDetector(
              child:Card(
               color: Colors.orange,
@@ -75,7 +72,7 @@ class Schedule extends StatelessWidget {
               builder: (context) => Tuesday('Tuesday')
             )),
             ),
-            SizedBox(height:50),
+          
             GestureDetector(
              child:Card(
               color: Colors.purple,
@@ -94,7 +91,7 @@ class Schedule extends StatelessWidget {
               builder: (context) => Wednesday('Wednesday')
             )),
             ),
-            SizedBox(height:50),
+          
            GestureDetector(
              child:Card(
               color: Colors.greenAccent,
@@ -113,7 +110,7 @@ class Schedule extends StatelessWidget {
               builder: (context) => Thursday('Thursday')
             )),
             ),
-            SizedBox(width:50),
+            
             GestureDetector(
              child:Card(
               color: Colors.red,
@@ -132,7 +129,25 @@ class Schedule extends StatelessWidget {
               builder: (context) => Friday('Friday')
             )),
             ),
-
+           
+            GestureDetector(
+             child:Card(
+              color: Colors.black,
+              elevation: 10,
+              child:Center(
+              child: Text('Saturday',
+              style:GoogleFonts.pacifico(
+                fontSize: 20,
+                fontWeight:FontWeight.bold,
+                color: Colors.white),
+              ),
+                ),
+            ),
+            onTap: () => Navigator.push(context, 
+            MaterialPageRoute(
+              builder: (context) => Saturday('Saturday')
+            )),
+            ),
           ]
         ),
       ),

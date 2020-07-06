@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:nice_button/nice_button.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:student_companion/checklist.dart';
+import 'package:student_companion/student.dart';
 import 'package:student_companion/contacts.dart';
 import 'package:student_companion/dining.dart';
 import 'package:student_companion/location.dart';
-import 'package:student_companion/schedule.dart';
+import 'package:student_companion/schedule.dart'; 
 import 'package:student_companion/transport.dart';
-import 'package:student_companion/website.dart';
+import 'package:student_companion/website.dart'; 
 
 
 
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.white,
        
       ),
-      home:HomePage(),
+      home: HomePage(),
     );
   }
 }
@@ -39,8 +39,9 @@ class HomePage extends StatelessWidget {
          centerTitle: true,
          elevation: 0.0,
       ),
-      body: Center(
+      body:  Center(
         child:Column(
+
           crossAxisAlignment:CrossAxisAlignment.start,
           children:<Widget>[
             Row(),
@@ -52,7 +53,7 @@ class HomePage extends StatelessWidget {
                   children:<Widget>[
                   Center(
                     child:Image(
-                      image: AssetImage('assets/welcome.jpg'),
+                      image: AssetImage('assets/welcome2.jpg'),
                       height: 300.0,
                       width: 300.0,
                     ),
@@ -92,11 +93,7 @@ class HomePage extends StatelessWidget {
           ]
         )
       ),
-      //bottom Nav
-      
-
-
-
+     
     //nav drawer
       drawer: Drawer(
         child: ListView( 
@@ -118,7 +115,7 @@ class HomePage extends StatelessWidget {
               ),
             ),
             ListTile( 
-              title: Text("Checklist",
+              title: Text("Student Life",
               style:GoogleFonts.pacifico(color: Colors.lightBlue,
               fontSize: 15.0),
               ),
@@ -128,7 +125,7 @@ class HomePage extends StatelessWidget {
                 Navigator.of(context).pop();
                 Navigator.of(context).push(MaterialPageRoute(
                   builder: (BuildContext context)=>
-                  Checklist("Checklist")
+                  Student("Student")
                   )
                   );
               },
@@ -145,6 +142,7 @@ class HomePage extends StatelessWidget {
                   Location("Location")));
               },
              ),
+             
              ListTile( 
               title: Text("Dining",style:GoogleFonts.pacifico(color: Colors.lightBlue,
               fontSize: 15.0),),
@@ -205,5 +203,6 @@ class HomePage extends StatelessWidget {
     );
   }
 } 
+
 
 

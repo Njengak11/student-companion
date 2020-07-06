@@ -187,4 +187,4 @@ class Friday extends StatelessWidget {
         ),
     );
   }
-}
+}  

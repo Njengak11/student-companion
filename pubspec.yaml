@@ -21,7 +21,7 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
-  webview_flutter: ^0.3.22+1
+  
   
   flutter:
     sdk: flutter
@@ -33,8 +33,11 @@ dependencies:
   
   google_fonts: ^1.1.0
 
-  flip_card: ^0.4.4
+  titled_navigation_bar: ^4.1.0
 
+  webview_flutter: ^0.3.22+1
+
+ 
 
 
 

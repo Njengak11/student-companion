@@ -24,6 +24,7 @@ class Schedule extends StatelessWidget {
          elevation: 0.0,
       ),
       
+
       body: Container(
         padding: EdgeInsets.all(10),
         child:GridView(
@@ -31,9 +32,8 @@ class Schedule extends StatelessWidget {
             crossAxisCount:2 
           ),
           children:<Widget>[
-          
-            
-           
+          SizedBox(width:5.0),
+          SizedBox(height:5.0),
             GestureDetector(
              child:Card(
               color: Colors.blueAccent,
@@ -148,6 +148,8 @@ class Schedule extends StatelessWidget {
               builder: (context) => Saturday('Saturday')
             )),
             ),
+             SizedBox(width:5.0),
+          SizedBox(height:5.0),
           ]
         ),
       ),

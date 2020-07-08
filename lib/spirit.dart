@@ -22,7 +22,7 @@ class Spirit extends StatelessWidget {
         padding:const EdgeInsets.fromLTRB(30.0, 10.0, 30.0, 0),
         children:<Widget>[ 
           Image.asset(
-            'assets/spirit2.jpg',
+            'assets/spirit.png',
             fit: BoxFit.fill,
           ),
           

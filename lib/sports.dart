@@ -22,7 +22,7 @@ class Sports extends StatelessWidget {
         padding:const EdgeInsets.fromLTRB(30.0, 10.0, 30.0, 0),
         children:<Widget>[ 
           Image.asset(
-            'assets/sports.jpg',
+            'assets/sport.png',
             fit: BoxFit.fill,
           ),
          SizedBox(height: 20.0,),

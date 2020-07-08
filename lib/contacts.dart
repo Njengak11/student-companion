@@ -23,7 +23,7 @@ class Contacts extends StatelessWidget {
   children: <Widget>[
       Center(
              child: Image.asset(
-            'assets/contact.jpg',
+            'assets/call.png',
             fit: BoxFit.fill,
           ),
             ),

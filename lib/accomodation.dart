@@ -22,7 +22,7 @@ class Accomodation extends StatelessWidget {
         padding:const EdgeInsets.fromLTRB(30.0, 10.0, 30.0, 0),
         children:<Widget>[
           Image.asset(
-            'assets/doem.jpg',
+            'assets/home.png',
             fit: BoxFit.fill,
           ),
           

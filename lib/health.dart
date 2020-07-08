@@ -22,7 +22,7 @@ class Health extends StatelessWidget {
         padding:const EdgeInsets.fromLTRB(30.0, 10.0, 30.0, 0),
         children:<Widget>[ 
           Image.asset(
-            'assets/health.jpg',
+            'assets/health.png',
             fit: BoxFit.fill,
           ),
           

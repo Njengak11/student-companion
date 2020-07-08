@@ -31,7 +31,7 @@ class Student extends StatelessWidget {
          padding:const EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0) ,
          children: <Widget>[
              Image.asset(
-               'assets/student.jpg',
+               'assets/social.png',
                fit:BoxFit.fill
              ),
             SizedBox(height:20.0),

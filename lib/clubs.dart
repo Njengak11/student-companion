@@ -22,7 +22,7 @@ class Clubs extends StatelessWidget {
         padding:const EdgeInsets.fromLTRB(30.0, 10.0, 30.0, 0),
         children:<Widget>[ 
           Image.asset(
-            'assets/clubs.jpg',
+            'assets/club.png',
             fit: BoxFit.fill,
           ),
           SizedBox(height:20.0),

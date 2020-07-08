@@ -23,7 +23,7 @@ class Dining extends StatelessWidget {
          padding:const EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0) ,
          children: <Widget>[
              Image.asset(
-               'assets/eating.jpg',
+               'assets/food.png',
                fit:BoxFit.fill
              ),
             SizedBox(height:20.0),

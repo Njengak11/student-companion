@@ -1,6 +1,9 @@
+
 import 'package:flutter/material.dart';
 import 'package:nice_button/nice_button.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:student_companion/camera.dart';
+import 'package:student_companion/faq.dart';
 import 'package:student_companion/student.dart';
 import 'package:student_companion/contacts.dart';
 import 'package:student_companion/dining.dart';
@@ -26,9 +29,15 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   @override
+    _HomePageState createState() => _HomePageState();
+}
 
+class _HomePageState extends State <HomePage>{
+  
+
+   @override 
   Widget build(BuildContext context) {
     return Scaffold(
        backgroundColor: Colors.white,
@@ -39,7 +48,8 @@ class HomePage extends StatelessWidget {
          centerTitle: true,
          elevation: 0.0,
       ),
-      body:  Center(
+      body:  Container(
+      child:Center(
         child:Column(
 
           crossAxisAlignment:CrossAxisAlignment.start,
@@ -53,7 +63,7 @@ class HomePage extends StatelessWidget {
                   children:<Widget>[
                   Center(
                     child:Image(
-                      image: AssetImage('assets/welcome2.jpg'),
+                      image: AssetImage('assets/welcome.png'),
                       height: 300.0,
                       width: 300.0,
                     ),
@@ -93,6 +103,20 @@ class HomePage extends StatelessWidget {
           ]
         )
       ),
+      ),
+        floatingActionButton: FloatingActionButton(
+          backgroundColor: Colors.lightBlue,
+          elevation: 2.0,
+          child: Icon(Icons.camera),
+          onPressed: () {
+             Navigator.push( context,
+                    MaterialPageRoute(builder: (context)
+                    => Camera('Camera'),
+                    )
+                      );
+                  },
+        ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
      
     //nav drawer
       drawer: Drawer(
@@ -191,6 +215,20 @@ class HomePage extends StatelessWidget {
                   Website(" Website")));
               },
              ),
+             ListTile( 
+              title: Text(" FAQS",style:GoogleFonts.pacifico(color: Colors.lightBlue,
+              fontSize: 15.0),),
+              trailing: Icon(Icons.help,
+              color: Colors.lightBlue),
+              onTap: (){
+                Navigator.of(context).pop();
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (BuildContext context)=>
+                  Faq(" Faq")));
+              },
+             ),
+              
+              
              Divider(),
               ListTile( 
               title: Text("Close",style:GoogleFonts.pacifico(color: Colors.lightBlue),),
@@ -202,7 +240,8 @@ class HomePage extends StatelessWidget {
       ),
     );
   }
-} 
+}
+
 
 
 

@@ -25,17 +25,15 @@ dependencies:
   
   flutter:
     sdk: flutter
-
-
-
-
+    
   nice_button: ^0.1.7
   
   google_fonts: ^1.1.0
 
-  titled_navigation_bar: ^4.1.0
-
   webview_flutter: ^0.3.22+1
+
+ 
+
 
  
 
